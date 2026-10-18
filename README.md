@@ -53,7 +53,7 @@ ESP32 (Wokwi) ──MQTT──► ThingsBoard Cloud ──REST API──► Goog
 
 Deploy (chỉ cần trình duyệt):
 1. https://share.streamlit.io → đăng nhập bằng GitHub → **Create app → Deploy a public app from GitHub**.
-2. Repository `khoiphamdc/iot-pipeline`, Branch `main`, Main file path `app/streamlit_app.py`.
+2. Repository `khoiphamdc/iot-b2`, Branch `main`, Main file path `app/streamlit_app.py`.
 3. **Advanced settings → Secrets**, dán (thay bằng giá trị của bạn):
    ```toml
    THINGSBOARD_URL = "https://thingsboard.cloud"
