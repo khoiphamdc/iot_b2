@@ -79,7 +79,7 @@ Schema InfluxDB:
 | `iot_raw` (7 ngày) | `sensor_raw` | device_id | distance_cm, rssi (float); sequence, uptime_s (integer) |
 | `iot_processed` (30 ngày) | `sensor_processed` | device_id | distance_rolling_mean, distance_delta, các cột `*_scaled` |
 
-## Kết quả chính (11/10/2026, 08:50–09:20)
+## Kết quả chính (18/10/2026, 08:50–09:20)
 
 | Chỉ số | Giá trị |
 |---|---|
