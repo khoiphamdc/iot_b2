@@ -1,0 +1,33 @@
+{
+  "thingsboard": {
+    "url": "https://thingsboard.cloud",
+    "device_id": "dff594d0-bfb7-11f1-b930-ad60e0953111",
+    "mqtt_topic": "v1/devices/me/telemetry",
+    "telemetry_keys": ["distance_cm", "rssi", "sequence", "uptime_s"],
+    "api_key": "nhập bằng getpass khi chạy notebook, không lưu ở đây"
+  },
+  "collection": {
+    "window_minutes": 30,
+    "limit": 500,
+    "agg": "NONE",
+    "device_period_s": 5
+  },
+  "validation": {
+    "distance_cm": [2, 400],
+    "rssi": [-120, 0]
+  },
+  "preprocess": {
+    "outlier_methods": ["iqr", "zscore", "range_check"],
+    "iqr_k": 1.5,
+    "zscore_threshold": 3,
+    "rolling_window": 3,
+    "scaler": "MinMax"
+  },
+  "influxdb": {
+    "url": "https://us-east-1-1.aws.cloud2.influxdata.com",
+    "org": "TEN_ORGANIZATION",
+    "token": "nhập bằng getpass khi chạy notebook, không lưu ở đây",
+    "buckets": {"iot_raw": "7 ngày", "iot_processed": "30 ngày"},
+    "measurements": {"sensor_raw": "iot_raw", "sensor_processed": "iot_processed"}
+  }
+}
